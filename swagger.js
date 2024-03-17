@@ -6,10 +6,10 @@ const doc = {
     description: 'Contacts List API documentation'
   },
   servers: [
-    // {
-    //     url: 'https://contacts-ia6n.onrender.com/',
-    //     description: 'Render URL'
-    // },
+    {
+        url: 'https://blogdata-3q6n.onrender.com',
+        description: 'Render URL'
+    },
     {
         url: 'http://localhost:8080',
         description: 'localhost:8080'

@@ -7,6 +7,10 @@
   },
   "servers": [
     {
+      "url": "https://blogdata-3q6n.onrender.com",
+      "description": "Render URL"
+    },
+    {
       "url": "http://localhost:8080",
       "description": "localhost:8080"
     }
@@ -29,12 +33,12 @@
           "Blogs"
         ],
         "description": "Create blog on server root",
+        "produces": [
+          "application/json"
+        ],
         "responses": {
           "200": {
             "description": "OK"
-          },
-          "500": {
-            "description": "Internal Server Error"
           }
         },
         "requestBody": {
@@ -75,12 +79,12 @@
           "Blogs"
         ],
         "description": "Delete all blogs on server root.",
+        "produces": [
+          "application/json"
+        ],
         "responses": {
-          "204": {
-            "description": "No Content"
-          },
-          "500": {
-            "description": "Internal Server Error"
+          "200": {
+            "description": "OK"
           }
         }
       }
@@ -113,6 +117,9 @@
           "Blogs"
         ],
         "description": "Update blog by ID on server root",
+        "produces": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -125,11 +132,8 @@
           }
         ],
         "responses": {
-          "204": {
-            "description": "No Content"
-          },
-          "500": {
-            "description": "Internal Server Error"
+          "200": {
+            "description": "OK"
           }
         },
         "requestBody": {
@@ -170,6 +174,9 @@
           "Blogs"
         ],
         "description": "Delete blog by ID on server root",
+        "produces": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -182,11 +189,8 @@
           }
         ],
         "responses": {
-          "204": {
-            "description": "No Content"
-          },
-          "500": {
-            "description": "Internal Server Error"
+          "200": {
+            "description": "OK"
           }
         }
       }

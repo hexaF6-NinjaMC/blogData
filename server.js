@@ -6,6 +6,7 @@ const contactRoutes = require('./routes/blogDataRoutes');
 const swaggerUI = require('swagger-ui-express');
 const swaggerDocument = require('./swagger.json');
 const swaggerOptions = require('./swagger-options');
+const createError = require('http-errors');
 
 const port = process.env.PORT || 8080;
 const app = express();
@@ -21,6 +22,20 @@ app
     .use('/', contactRoutes)
     .use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerDocument, swaggerOptions))
     .use(express.static('./frontend', {root: __dirname}));
+
+app.use((req, res, next) => {
+    next(createError(404, 'Not Found'));
+});
+
+app.use((err, req, res, next) => {
+    res.status(err.status || 500);
+    res.send({
+        error: {
+            status: err.status || 500,
+            message: err.message
+        }
+    });
+});
 
 mongodb.initDb((err) => {
     if (err) {
