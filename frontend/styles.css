@@ -23,6 +23,10 @@ nav>ul {
     list-style: none;
 }
 
+nav>ul>li {
+    margin: 1em;
+}
+
 a {
     color: rgb(39, 36, 36);
     padding: 0.5rem;
