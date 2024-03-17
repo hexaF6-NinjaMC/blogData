@@ -1,0 +1,139 @@
+### =========================================================== ###
+### localhost:8080/blogs
+### Replace {:id} with the repective HexString UUID
+### =========================================================== ###
+
+
+###
+### Should start with '[]'
+GET http://localhost:8080/blogs HTTP/1.1
+
+###
+POST http://localhost:8080/blogs HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "email@doe.com",
+    "favoriteColor": "monotonic shades",
+    "birthday": "NT/4U/1999"
+}
+
+###
+### Replace {:id} with the repective HexString UUID
+GET http://localhost:8080/blogs/:id HTTP/1.1
+
+###
+### Replace {:id} with the repective HexString UUID
+PUT http://localhost:8080/blogs/:id HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "johnnyboi@doe.com",
+    "favoriteColor": "dark colors",
+    "birthday": "NT/4U/1999"
+}
+
+###
+POST http://localhost:8080/blogs HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "Jane",
+    "lastName": "Doe",
+    "email": "janet@doe.com",
+    "favoriteColor": "pretty colors",
+    "birthday": "NT/4U/2000"
+}
+
+###
+### Should return JSON with 2 items
+GET http://localhost:8080/blogs HTTP/1.1
+
+###
+### Replace {:id} with the repective HexString UUID
+GET http://localhost:8080/blogs/:id HTTP/1.1
+
+###
+### Replace {:id} with the repective HexString UUID
+DELETE http://localhost:8080/blogs/:id HTTP/1.1
+
+###
+### Delete all documents within collection
+DELETE http://localhost:8080/blogs HTTP/1.1
+
+###
+### Should end with '[]'
+GET http://localhost:8080/blogs HTTP/1.1
+
+
+### =========================================================== ###
+### Render - https://contacts-ia6n.onrender.com/blogs
+###
+
+### Should start with '[]'
+GET https://contacts-ia6n.onrender.com/blogs HTTP/1.1
+
+###
+POST https://contacts-ia6n.onrender.com/blogs HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "Aaron",
+    "lastName": "Bechtel",
+    "email": "bechtel.aaron22@gmail.com",
+    "favoriteColor": "Cyan",
+    "birthday": "10/19/1997"
+}
+
+###
+### Replace {:id} with the repective HexString UUID
+GET https://contacts-ia6n.onrender.com/blogs/:id HTTP/1.1
+
+###
+### Replace {:id} with the repective HexString UUID
+PUT https://contacts-ia6n.onrender.com/blogs/:id HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "email@doe.com",
+    "favoriteColor": "dark colors",
+    "birthday": "NT/4U/1999"
+}
+
+###
+POST https://contacts-ia6n.onrender.com/blogs HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "Richelle",
+    "lastName": "Fowler",
+    "email": "richellefowler5@gmail.com",
+    "favoriteColor": "pretty colors",
+    "birthday": "NT/4U/2000"
+}
+
+###
+### Should return JSON with 2 items
+GET https://contacts-ia6n.onrender.com/blogs HTTP/1.1
+
+###
+### Replace {:id} with the repective HexString UUID
+GET https://contacts-ia6n.onrender.com/blogs/:id HTTP/1.1
+
+###
+### Replace {:id} with the repective HexString UUID
+DELETE https://contacts-ia6n.onrender.com/blogs/:id HTTP/1.1
+
+###
+### Delete all documents within collection
+DELETE https://contacts-ia6n.onrender.com/blogs/ HTTP/1.1
+
+###
+### Should end with '[]'
+GET https://contacts-ia6n.onrender.com/blogs HTTP/1.1
