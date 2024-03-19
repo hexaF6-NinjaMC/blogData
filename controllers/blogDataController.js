@@ -100,7 +100,7 @@ const updateBlog = async (req, res, next) => {
 
         const response = await mongodb.getDb().db('BlogData').collection('blogs').replaceOne({ _id: blogId }, blogData);
         
-        if (!response) {
+        if (response.modifiedCount == 0) {
             throw createError(404, 'No blogs found with that ID.');
         }
 
