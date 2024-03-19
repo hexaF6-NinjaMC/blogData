@@ -5,48 +5,57 @@
 
 
 ###
-### Should start with '[]'
+### Should start with '{"message": "No blogs to display"}' or something similar, or with a collection of documents in the MongoDB collection
 GET http://localhost:8080/blogs HTTP/1.1
 
 ###
+### Each field has various validations attempted, and they send appropriate responses if failed. Fill them in as needed
 POST http://localhost:8080/blogs HTTP/1.1
 content-type: application/json
 
 {
-    "firstName": "John",
-    "lastName": "Doe",
-    "email": "email@doe.com",
-    "favoriteColor": "monotonic shades",
-    "birthday": "NT/4U/1999"
+    "firstName": "",
+    "lastName": "",
+    "email": "",
+    "content": "",
+    "title": "",
+    "UUID": "",
+    "date": ""
 }
 
 ###
-### Replace {:id} with the repective HexString UUID
+### Replace {:id} with the respective HexString UUID
 GET http://localhost:8080/blogs/:id HTTP/1.1
 
 ###
-### Replace {:id} with the repective HexString UUID
+### Replace {:id} with the respective HexString UUID
+### Each field has various validations attempted, and they send appropriate responses if failed. Fill them in as needed
 PUT http://localhost:8080/blogs/:id HTTP/1.1
 content-type: application/json
 
 {
-    "firstName": "John",
-    "lastName": "Doe",
-    "email": "johnnyboi@doe.com",
-    "favoriteColor": "dark colors",
-    "birthday": "NT/4U/1999"
+    "firstName": "",
+    "lastName": "",
+    "email": "",
+    "content": "",
+    "title": "",
+    "UUID": "",
+    "date": ""
 }
 
 ###
+### Each field has various validations attempted, and they send appropriate responses if failed. Fill them in as needed
 POST http://localhost:8080/blogs HTTP/1.1
 content-type: application/json
 
 {
-    "firstName": "Jane",
-    "lastName": "Doe",
-    "email": "janet@doe.com",
-    "favoriteColor": "pretty colors",
-    "birthday": "NT/4U/2000"
+    "firstName": "",
+    "lastName": "",
+    "email": "",
+    "content": "",
+    "title": "",
+    "UUID": "",
+    "date": ""
 }
 
 ###
@@ -54,11 +63,11 @@ content-type: application/json
 GET http://localhost:8080/blogs HTTP/1.1
 
 ###
-### Replace {:id} with the repective HexString UUID
+### Replace {:id} with the respective HexString UUID
 GET http://localhost:8080/blogs/:id HTTP/1.1
 
 ###
-### Replace {:id} with the repective HexString UUID
+### Replace {:id} with the respective HexString UUID
 DELETE http://localhost:8080/blogs/:id HTTP/1.1
 
 ###
@@ -66,7 +75,7 @@ DELETE http://localhost:8080/blogs/:id HTTP/1.1
 DELETE http://localhost:8080/blogs HTTP/1.1
 
 ###
-### Should end with '[]'
+### Should end with '{"message": "No blogs to display"}' or something similar, or with a collection of documents in the MongoDB collection
 GET http://localhost:8080/blogs HTTP/1.1
 
 
@@ -74,48 +83,58 @@ GET http://localhost:8080/blogs HTTP/1.1
 ### Render - https://blogdata-3q6n.onrender.com/blogs
 ###
 
-### Should start with '[]'
+###
+### Should start with '{"message": "No blogs to display"}' or something similar, or with a collection of documents in the MongoDB collection
 GET https://blogdata-3q6n.onrender.com/blogs HTTP/1.1
 
 ###
+### Each field has various validations attempted, and they send appropriate responses if failed. Fill them in as needed
 POST https://blogdata-3q6n.onrender.com/blogs HTTP/1.1
 content-type: application/json
 
 {
-    "firstName": "Aaron",
-    "lastName": "Bechtel",
-    "email": "bechtel.aaron22@gmail.com",
-    "favoriteColor": "Cyan",
-    "birthday": "10/19/1997"
+    "firstName": "",
+    "lastName": "",
+    "email": "",
+    "content": "",
+    "title": "",
+    "UUID": "",
+    "date": ""
 }
 
 ###
-### Replace {:id} with the repective HexString UUID
+### Replace {:id} with the respective HexString UUID
 GET https://blogdata-3q6n.onrender.com/blogs/:id HTTP/1.1
 
 ###
-### Replace {:id} with the repective HexString UUID
+### Replace {:id} with the respective HexString UUID
+### Each field has various validations attempted, and they send appropriate responses if failed. Fill them in as needed
 PUT https://blogdata-3q6n.onrender.com/blogs/:id HTTP/1.1
 content-type: application/json
 
 {
-    "firstName": "John",
-    "lastName": "Doe",
-    "email": "email@doe.com",
-    "favoriteColor": "dark colors",
-    "birthday": "NT/4U/1999"
+    "firstName": "",
+    "lastName": "",
+    "email": "",
+    "content": "",
+    "title": "",
+    "UUID": "",
+    "date": ""
 }
 
 ###
+### Each field has various validations attempted, and they send appropriate responses if failed. Fill them in as needed
 POST https://blogdata-3q6n.onrender.com/blogs HTTP/1.1
 content-type: application/json
 
 {
-    "firstName": "Richelle",
-    "lastName": "Fowler",
-    "email": "richellefowler5@gmail.com",
-    "favoriteColor": "pretty colors",
-    "birthday": "NT/4U/2000"
+    "firstName": "",
+    "lastName": "",
+    "email": "",
+    "content": "",
+    "title": "",
+    "UUID": "",
+    "date": ""
 }
 
 ###
@@ -123,11 +142,11 @@ content-type: application/json
 GET https://blogdata-3q6n.onrender.com/blogs HTTP/1.1
 
 ###
-### Replace {:id} with the repective HexString UUID
+### Replace {:id} with the respective HexString UUID
 GET https://blogdata-3q6n.onrender.com/blogs/:id HTTP/1.1
 
 ###
-### Replace {:id} with the repective HexString UUID
+### Replace {:id} with the respective HexString UUID
 DELETE https://blogdata-3q6n.onrender.com/blogs/:id HTTP/1.1
 
 ###
@@ -135,5 +154,5 @@ DELETE https://blogdata-3q6n.onrender.com/blogs/:id HTTP/1.1
 DELETE https://blogdata-3q6n.onrender.com/blogs/ HTTP/1.1
 
 ###
-### Should end with '[]'
+### Should start with '{"message": "No blogs to display"}' or something similar, or with a collection of documents in the MongoDB collection
 GET https://blogdata-3q6n.onrender.com/blogs HTTP/1.1
