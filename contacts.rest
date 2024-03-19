@@ -71,14 +71,14 @@ GET http://localhost:8080/blogs HTTP/1.1
 
 
 ### =========================================================== ###
-### Render - https://contacts-ia6n.onrender.com/blogs
+### Render - https://blogdata-3q6n.onrender.com/blogs
 ###
 
 ### Should start with '[]'
-GET https://contacts-ia6n.onrender.com/blogs HTTP/1.1
+GET https://blogdata-3q6n.onrender.com/blogs HTTP/1.1
 
 ###
-POST https://contacts-ia6n.onrender.com/blogs HTTP/1.1
+POST https://blogdata-3q6n.onrender.com/blogs HTTP/1.1
 content-type: application/json
 
 {
@@ -91,11 +91,11 @@ content-type: application/json
 
 ###
 ### Replace {:id} with the repective HexString UUID
-GET https://contacts-ia6n.onrender.com/blogs/:id HTTP/1.1
+GET https://blogdata-3q6n.onrender.com/blogs/:id HTTP/1.1
 
 ###
 ### Replace {:id} with the repective HexString UUID
-PUT https://contacts-ia6n.onrender.com/blogs/:id HTTP/1.1
+PUT https://blogdata-3q6n.onrender.com/blogs/:id HTTP/1.1
 content-type: application/json
 
 {
@@ -107,7 +107,7 @@ content-type: application/json
 }
 
 ###
-POST https://contacts-ia6n.onrender.com/blogs HTTP/1.1
+POST https://blogdata-3q6n.onrender.com/blogs HTTP/1.1
 content-type: application/json
 
 {
@@ -120,20 +120,20 @@ content-type: application/json
 
 ###
 ### Should return JSON with 2 items
-GET https://contacts-ia6n.onrender.com/blogs HTTP/1.1
+GET https://blogdata-3q6n.onrender.com/blogs HTTP/1.1
 
 ###
 ### Replace {:id} with the repective HexString UUID
-GET https://contacts-ia6n.onrender.com/blogs/:id HTTP/1.1
+GET https://blogdata-3q6n.onrender.com/blogs/:id HTTP/1.1
 
 ###
 ### Replace {:id} with the repective HexString UUID
-DELETE https://contacts-ia6n.onrender.com/blogs/:id HTTP/1.1
+DELETE https://blogdata-3q6n.onrender.com/blogs/:id HTTP/1.1
 
 ###
 ### Delete all documents within collection
-DELETE https://contacts-ia6n.onrender.com/blogs/ HTTP/1.1
+DELETE https://blogdata-3q6n.onrender.com/blogs/ HTTP/1.1
 
 ###
 ### Should end with '[]'
-GET https://contacts-ia6n.onrender.com/blogs HTTP/1.1
+GET https://blogdata-3q6n.onrender.com/blogs HTTP/1.1
