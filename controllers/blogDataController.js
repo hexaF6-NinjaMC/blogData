@@ -7,6 +7,11 @@ const getBlog = async (req, res, next) => {
     // #swagger.tags = ['Blogs']
     // #swagger.description='Get Blog by ID on server root'
     // #swagger.parameters['id'] = {description: 'HexString of 24 characters', type: 'string'}
+    // #swagger.responses[200] = {description: 'Blog data successfully retrieved.'}
+    // #swagger.responses[400] = {description: 'Bad Request: ID should be 24 characters long.'}
+    // #swagger.responses[404] = {description: 'Nothing found with that ID.'}
+    // #swagger.responses[422] = {description: 'Unprocessable Entity: Data is not valid.'}
+    // #swagger.responses[500] = {description: 'Server error occurred while retrieving the blog data.'}
     try {
         const _blogId = req.params.id;
         if (_blogId.length != 24) {
@@ -30,6 +35,9 @@ const getBlog = async (req, res, next) => {
 const getAllBlogs = async (req, res, next) => {
     // #swagger.tags = ['Blogs']
     // #swagger.description='Get all blogs on server root'
+    // #swagger.responses[200] = {description: 'Blog data successfully retrieved.'}
+    // #swagger.responses[422] = {description: 'Unprocessable Entity: Data is not valid.'}
+    // #swagger.responses[500] = {description: 'Server error occurred while retrieving all blog data.'}
     try {
         const result = await mongodb.getDb().db('BlogData').collection('blogs').find();
         result.toArray()
@@ -51,6 +59,9 @@ const getAllBlogs = async (req, res, next) => {
 const createBlog = async (req, res, next) => {
     // #swagger.tags = ['Blogs']
     // #swagger.description='Create blog on server root'
+    // #swagger.responses[200] = {description: 'Created blog data successfully.'}
+    // #swagger.responses[422] = {description: 'Unprocessable Entity: Data is not valid.'}
+    // #swagger.responses[500] = {description: 'Server error occurred while creating the blog data.'}
     try {
         const blog = {
             firstName: req.body.firstName,
@@ -81,6 +92,11 @@ const updateBlog = async (req, res, next) => {
     // #swagger.tags = ['Blogs']
     // #swagger.description = 'Update blog by ID on server root'
     // #swagger.parameters['id'] = {description: 'HexString of 24 characters', type: 'string'}
+    // #swagger.responses[200] = {description: 'Updated blog data successfully.'}
+    // #swagger.responses[400] = {description: 'Bad Request: ID should be 24 characters long.'}
+    // #swagger.responses[404] = {description: 'Nothing found with that ID.'}
+    // #swagger.responses[422] = {description: 'Unprocessable Entity: Data is not valid.'}
+    // #swagger.responses[500] = {description: 'Server error occurred while updating the blog data.'}
     try {
         const _blogId = req.params.id;
         if (_blogId.length != 24) {
@@ -120,6 +136,11 @@ const deleteBlog = async (req, res, next) => {
     // #swagger.tags = ['Blogs']
     // #swagger.description='Delete blog by ID on server root'
     // #swagger.parameters['id'] = {description: 'HexString of 24 characters', type: 'string'}
+    // #swagger.responses[200] = {description: 'Deleted blog data successfully.'}
+    // #swagger.responses[400] = {description: 'Bad Request: ID should be 24 characters long.'}
+    // #swagger.responses[404] = {description: 'Nothing found with that ID.'}
+    // #swagger.responses[422] = {description: 'Unprocessable Entity: Data is not valid.'}
+    // #swagger.responses[500] = {description: 'Server error occurred while deleting the blog data.'}
     try {
         const _blogId = req.params.id;
         if (_blogId.length != 24) {
@@ -146,6 +167,9 @@ const deleteBlog = async (req, res, next) => {
 const deleteAll = async (req, res, next) => {
     // #swagger.tags = ['Blogs']
     // #swagger.description='Delete all blogs on server root.'
+    // #swagger.responses[200] = {description: 'Deleted blog data successfully.'}
+    // #swagger.responses[422] = {description: 'Unprocessable Entity: Data is not valid.'}
+    // #swagger.responses[500] = {description: 'Server error occurred while deleting all blog data.'}
     try {
         const response = await mongodb.getDb().db('BlogData').collection('blogs').deleteMany({});
 

@@ -12,7 +12,7 @@ const doc = {
     },
     {
         url: 'http://localhost:8080',
-        description: 'localhost:8080'
+        description: 'Development Server'
     }
   ]
 };

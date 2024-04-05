@@ -12,7 +12,7 @@
     },
     {
       "url": "http://localhost:8080",
-      "description": "localhost:8080"
+      "description": "Development Server"
     }
   ],
   "paths": {
@@ -24,7 +24,13 @@
         "description": "Get all blogs on server root",
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Blog data successfully retrieved."
+          },
+          "422": {
+            "description": "Unprocessable Entity: Data is not valid."
+          },
+          "500": {
+            "description": "Server error occurred while retrieving all blog data."
           }
         }
       },
@@ -38,7 +44,13 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Created blog data successfully."
+          },
+          "422": {
+            "description": "Unprocessable Entity: Data is not valid."
+          },
+          "500": {
+            "description": "Server error occurred while creating the blog data."
           }
         },
         "requestBody": {
@@ -84,7 +96,13 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Deleted blog data successfully."
+          },
+          "422": {
+            "description": "Unprocessable Entity: Data is not valid."
+          },
+          "500": {
+            "description": "Server error occurred while deleting all blog data."
           }
         }
       }
@@ -108,7 +126,19 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Blog data successfully retrieved."
+          },
+          "400": {
+            "description": "Bad Request: ID should be 24 characters long."
+          },
+          "404": {
+            "description": "Nothing found with that ID."
+          },
+          "422": {
+            "description": "Unprocessable Entity: Data is not valid."
+          },
+          "500": {
+            "description": "Server error occurred while retrieving the blog data."
           }
         }
       },
@@ -133,7 +163,19 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Updated blog data successfully."
+          },
+          "400": {
+            "description": "Bad Request: ID should be 24 characters long."
+          },
+          "404": {
+            "description": "Nothing found with that ID."
+          },
+          "422": {
+            "description": "Unprocessable Entity: Data is not valid."
+          },
+          "500": {
+            "description": "Server error occurred while updating the blog data."
           }
         },
         "requestBody": {
@@ -190,7 +232,19 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Deleted blog data successfully."
+          },
+          "400": {
+            "description": "Bad Request: ID should be 24 characters long."
+          },
+          "404": {
+            "description": "Nothing found with that ID."
+          },
+          "422": {
+            "description": "Unprocessable Entity: Data is not valid."
+          },
+          "500": {
+            "description": "Server error occurred while deleting the blog data."
           }
         }
       }

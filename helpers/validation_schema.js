@@ -19,7 +19,7 @@ const blogSchema = Joi.object().keys({
             'string.min': '"Last Name" must be a string with at least 2 characters.',
             'string.pattern.base': '"Last Name" cannot have numbers.'
         }),
-    email: Joi.string().email().lowercase().trim().min(7).required(),
+    email: Joi.string().lowercase().trim().email().min(7).required(),
     content: Joi.string().trim().min(2).required(),
     title: Joi.string().trim().min(2).required(),
     UUID: Joi.string().lowercase().trim().alphanum().min(5).required(),
